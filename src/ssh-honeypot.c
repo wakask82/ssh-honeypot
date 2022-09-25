@@ -596,7 +596,8 @@ static int handle_ssh_auth(ssh_session session) {
 							   ssh_message_auth_user(message),
 							   ssh_message_auth_password(message));
 
-			log_entry("%s %s %s",
+			// Added for easy format with excel cell to coloumn
+			log_entry("| %s | %s | %s",
 					  ip,
 					  ssh_message_auth_user(message),
 					  ssh_message_auth_password(message));
